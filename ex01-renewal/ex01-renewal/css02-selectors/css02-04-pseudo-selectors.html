@@ -3,6 +3,58 @@
 
 <head>
     <title>CSS 가상 클래스 실습</title>
+    <style>
+        /* 가상 선택자
+            요소의 특정 상태에 부여되는 선택자
+            단독으로 사용될 수 는 없다
+            셀랙터의 상태*/
+
+        /* 반응 선택자 - 순서에 유의*/
+
+        /*link, visited 는 a 태그에서만 사용 가능*/
+        a:link{/* 방문한 적이 없는 링크*/
+            color:green;
+        }
+        a:visited{/*방문한 링크*/
+            color:gray;
+            font-weight: bold;
+        }
+        a:hover{/*마우스가 올라간 상태*/
+            color: crimson;
+        }
+        a:active{/*클릭한 상태*/
+            color:aqua;
+        }
+
+        /* 상태 선택자: 입력 양식의 상태에 따라 발생하는 선택자 */
+      
+        input:focus{
+            background-color: aquamarine;
+        }
+        input:disabled{
+            background-color: palevioletred;
+        }
+        input[type="checkbox"]:checked{
+            color: deeppink;
+        }
+
+        /* 구조 선택자: 등장하는 순서에 따른 선택, 주로 형제관계*/
+        ul#list > li:nth-child(2n){
+            /*ul#list의 자식들 li 중에서 2n 번째 ( 짝수 )*/
+            color: salmon;
+        }
+        ul#list > li:nth-child(2n - 1){
+            /* 홀 수 */
+            color: steelblue;
+        }
+        ul#list > li:first-child{/*nth-child(1)*/
+            color:rgb(64, 160, 39)
+        }
+        ul#list > li:last-child{
+            color: violet;
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -13,7 +65,7 @@
 
     <h2>상태 선택자 실습</h2>
     <input type="text" placeholder="텍스트 입력 (focus 실습)">
-    <input type="text" placeholder="텍스트 입력 (disabled 실습)" disabled>
+    <input type="text" placeholder="텍스트 입력 (disabled 실습)" disabled> <br/>
     <input type="checkbox" id="checkbox">
     <label for="checkbox">체크박스 (checked 실습)</label>
 

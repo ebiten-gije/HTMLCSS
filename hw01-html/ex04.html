@@ -5,20 +5,47 @@
         <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
         <title>인터넷개론</title>
         <!-- 스타일시트자리 -->
+        <style>
+           
+        </style>
     </head>
 
     <body>
-        <p>목차</p>
-        <ol>
-            <li><a href="../hw01-html/ex01.html">정의와 역사</a></li>
-            <li><a href="../hw01-html/ex02.html">특징과 영향</a></li>
-            <li><a href = "../hw01-html/ex03.html">국가별 속도</a></li>
-            <br/>
-        </ol>
-            <p><a href="../hw01-html/ex04.html">메일링 리스트 가입</a></p>
-        
-        
+        <nav>
+            <p>목차</p>
+            <ol>
+                <li><a href="../hw01-html/ex01.html">정의와 역사</a></li>
+                <li><a href="../hw01-html/ex02.html">특징과 영향</a></li>
+                <li><a href = "../hw01-html/ex03.html">국가별 속도</a></li>
+                <br/>
+            </ol>
+                <p><a href="../hw01-html/ex04.html">메일링 리스트 가입</a></p>
+        </nav>
 
+        <form action ="#" method="post">
+            <fieldset class="fs">
+                <legend>회원 정보</legend> <!-- 입력 양식 그룹의 제목-->
+                <label for ="username">아이디</label>
+                <input type="text" name="username" id="username" required /><br/>
+            
+                <label for="password">비밀번호</label>
+                <input type="password" name="password" id="password" required/><br/>
+    
+                <label for="password_confirm">비밀번호 확인</label>
+                <input type="password" name="password_confirm" id="password_confirm" required/><br/>
+
+                <label for="name">이름</label>
+                <input type="text" name ="name" id="name"><br/>
+    
+                <label for="email">사용자 이메일</label>
+                <input type="email" name="email" id="email" required/><br/>
+
+                <input type="checkbox" name="terms" id="terms" required/>
+                <label for="terms">이용 약관에 동의합니다.</label><br/>
+
+                <input type="submit" value="가입">
+                <input type="reset" value="다시 작성">
+            </fieldset>
     </body>
 
 </html>

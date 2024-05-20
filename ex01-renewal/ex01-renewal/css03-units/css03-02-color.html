@@ -3,6 +3,56 @@
 
 <head>
     <title>CSS 색상 실습</title>
+    <style>
+        body{
+            background-color: sandybrown;
+        }
+
+        div{
+            /* 여백 */
+            margin: 10px;
+            padding: 10px;
+            /* 폰트 색상 */
+            color: seashell;
+            border: 1px dotted lightgrey;
+        }
+
+        /*키워드 색상*/
+        .keyword-color{
+            background-color: olive;
+            color: springgreen;
+        }
+
+        /*HEX 색상*/
+        .hex-color{
+            background-color: #808000;
+            color: #A136DB;
+        }
+
+        /*RGB 색상*/
+        .rgb-color{
+            background-color: rgb(128, 128, 0);
+        }
+
+        /*RGB-A 색상*/
+        .rgba-color{
+            background-color: rgba(128, 128, 0, 0.5);
+        }
+
+        /*HSL 색상*/
+        .hsl-color{
+            /*  hue (색조): 0 ~ 360
+                Saturation(채도): 0(회색조) ~ 100%(온전한 색)
+                Lightness (명도): 0(빛 없음) ~ 100%(완전한 밝기)*/
+            background-color: hsl(56, 100%, 28%);
+        }
+
+        /*HSLA 색상*/
+        .hsla-color{
+            background-color: hsla(56, 100%, 28%, 0.5);
+        }
+
+    </style>
 </head>
 
 <body>

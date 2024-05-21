@@ -3,6 +3,77 @@
 
 <head>
     <title>CSS Box Model 실습</title>
+    <style>
+        /* 기본 margin padding 초기화*/
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .padding-box{
+            display: flex;
+            width: 100px;
+            height: 30px;
+            background-color: plum;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .margin-box{
+            display: flex;
+            width: 200px;
+            height: 200px;
+            background-color: indianred;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom-box{
+            display: flex;
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* padding 속성: 내부 간격 */
+        .padding-box{
+            /*padding: 100px;*/
+
+            /* 방향 접미사를 활용해서 개별 간격을 적용할 수 있다! */
+            /*padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;*/
+            
+            /* 값이 4개? top부터 시계 방향! */
+            /*padding: 10px 20px 30px 40px;*/
+
+            /* 두개? 상-하 / 좌-우 */
+            padding: 10px 20px;
+        }
+
+        /* margin 속성: 외부 간격 */
+        .margin-box{
+            border: 2px dotted greenyellow;
+
+            /* 1개 값으로 4방향*/
+            /*margin: 30px;*/
+
+            /* 방향 접미사를 활용, 개별 간격 적용*/
+            /*margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 50px;*/
+
+            /*4개의 값: 시계 방향*/
+            /*margin: 10px 30px 50px 70px;*/
+
+            /* 값이 두개? tb/rl*/
+            margin: 20px 20px;
+        }
+    </style>
 </head>
 
 <body>

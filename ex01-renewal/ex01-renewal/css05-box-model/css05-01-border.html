@@ -3,6 +3,58 @@
 
 <head>
     <title>CSS Border 실습</title>
+    <style>
+        .box{
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .solid-border{
+            /* 개별 테두리 속성*/
+            /*border-width: 2px;
+            border-style: solid;
+            border-color: mediumvioletred;*/
+
+            /* 한 번에 부여: width style color*/
+            border: 2px solid mediumvioletred;
+        }
+
+        .dashed-border{
+            border: 2px;
+            border-style: dashed;
+            border-color: midnightblue;
+        }
+
+        .dotted-border{
+            border: 2px dotted mediumseagreen;
+        }
+
+        .double-border{
+            border: 4px double magenta;
+        }
+
+        .groove-border{
+            border: 4px groove salmon;
+        }
+
+        /* border-radius : 테두리의 둥글기 꾸미는 속성
+            기준 위치: 좌상 우상 우하 좌하*/
+        img.round{
+            width: 240px;
+            /* 테두리의 둥글기 개별 값을 적용*/
+            /*border-top-left-radius: 10px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 55px;*/
+
+            /*border-radius: 20px 40px 60px 80px;*/
+
+            /*border-radius: 10px 50px;*/
+
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>

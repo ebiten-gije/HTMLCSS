@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>테이블</title>
+<link rel="stylesheet"
+        type="text/css"
+        href="../practices/exter102.css" />
+
+</head>
+<body>
+	<table class="tbl-ex">
+		<tr>
+			<th>형식</th>
+			<th>선택자 이름</th>
+			<th>스타일 적용 요소</th>
+			<th>호환성</th>
+		</tr>
+		<tr onclick="showPost('모든 HTML에 적용')">
+			<td>a</td>
+			<td>HTML</td>
+			<td>모든 HTML에 적용</td>
+			<td>IE4, FF1,Safari 1, 크롬 1,오페라 3.5, CSS1</td>
+		</tr>
+		<tr class="even"onclick="showPost('클래스로 정의해 준 HTML 태그')">
+			<td>.classname</td>
+			<td>클래스</td>
+			<td>클래스로 정의해 준 HTML 태그</td>
+			<td>IE4, FF1,Safari 1, 크롬 1,오페라 3.5, CSS1</td>
+		</tr>
+		<tr onclick="showPost('특정 HTML 태그에 종속된 클래스')">
+			<td>a.classname</td>
+			<td>종속 클래스</td>
+			<td>특정 HTML 태그에 종속된 클래스</td>
+			<td>IE4, FF1,Safari 1, 크롬 1,오페라 3.5, CSS1</td>
+		</tr>
+		<tr class="even"onclick="showPost('아이디로 정의해준 HTML 태그')">
+			<td>#idname</td>
+			<td>아이디</td>
+			<td>아이디로 정의해준 HTML 태그</td>
+			<td>IE4, FF1,Safari 1, 크롬 1,오페라 3.5, CSS1</td>
+		</tr>
+		<tr onclick="showPost('특정 HTML 태그에 종속된 아이디')">
+			<td>a#idname</td>
+			<td>종속아이디</td>
+			<td>특정 HTML 태그에 종속된 아이디</td>
+			<td>IE4, FF1,Safari 1, 크롬 1,오페라 3.5, CSS1</td>
+		</tr>
+		<tr class="even" onclick="showPost('모든 HTML 태그에 적용')">
+			<td>*</td>
+			<td>전체 선택</td>
+			<td>모든 HTML 태그에 적용</td>
+			<td>IE4, FF1,Safari 1, 크롬 1,오페라 3.5, CSS2</td>
+		</tr>	
+	</table>
+
+    <div id="postModal" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closePostModal()">&times;</span>
+			<p id="postContent"></p>
+		</div>
+	</div>
+
+    <script>
+		// 모달 팝업을 띄우는 함수
+		function showPost(content) {
+			document.getElementById('postContent').innerHTML = content;
+			document.getElementById('postModal').style.display = 'block';
+
+            // 모달 외부를 클릭했을 때 닫기
+            window.onclick = function(event) {
+                if (event.target == document.getElementById('postModal')) {
+                    document.getElementById('postModal').style.display = 'none';
+                }
+            }
+		}
+
+
+
+		// 모달 팝업을 닫는 함수
+		function closePostModal() {
+			document.getElementById('postModal').style.display = 'none';
+		}
+	</script>
+</body>
+</html>

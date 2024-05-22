@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+.tab-box{
+    width: 520px;
+    margin: 20px auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    float: left;
+    width: 100px;
+    height: 22px;
+    border: 1px solid #999;
+    background-color: #ccc;
+
+    text-align: center;
+    padding-top: 3px;
+    margin-right: 2px;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+ul{
+    height: 27px;
+}
+
+#abc{
+    border: 1px solid #999;
+    margin-top: -1px;
+    text-align: center;
+    line-height: 200px;
+    width: 516px;
+}
+
+.selected{
+    background-color: #fc6;
+}

@@ -1,0 +1,50 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+.tbl-ex{
+    margin: 10px auto;
+    border:1px solid #333;
+    border-collapse: collapse;
+    border-left: 0;
+    border-right: 0;
+    
+}
+
+th, td {
+    border:1px solid #333;
+    padding: 8px;
+    border-collapse: collapse;
+    border-left: 0;
+    border-right: 0;
+}
+
+td{
+    border-style: dotted;
+}
+
+th{
+    border-style: solid;
+    background-color: #999;
+    font-size: 1.1em;
+    color: #fff;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+tr:nth-child(2n){
+    background-color: #E8ECF6;
+}
+
+tr:hover{
+    background-color: #fc6;
+    cursor: grab;
+}
